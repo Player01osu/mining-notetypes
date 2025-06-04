@@ -1,0 +1,27 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<div class="target">
+    {{target-base-furigana}}
+</div>
+<br>
+{{definitions}}
+
+<script>
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+        if (event.key == 'g') {
+            toggle_click_show();
+        }
+    },
+    false
+);
+
+function toggle_click_show() {
+    let click_show = document.getElementById('click-show');
+    click_show.hidden = !click_show.hidden;
+}
+</script>

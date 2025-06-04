@@ -1,0 +1,32 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<div class="target">
+    {{target-base-furigana}}
+</div>
+<br>
+{{definitions}}
+
+<script>
+/* Key events */
+document.addEventListener(
+    "keydown",
+    (event) => {
+        /* Toggle on 'g' */
+        if (event.key == 'g') {
+            toggle_click_show();
+        }
+    },
+    false
+);
+
+function toggle_click_show() {
+    let click_show = document.getElementById('click-show');
+    click_show.hidden = !click_show.hidden;
+}
+
+/* Do not autoplay audio */
+// var elem = document.querySelector(".soundLink, .replaybutton"); // AnkiMobile & AnkiDroid / AnkiDesktop
+// if (elem) { elem.click(); }
+</script>

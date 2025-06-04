@@ -1,0 +1,19 @@
+.card {
+    font-family: arial;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+#click-show {
+}
+
+img {
+    height: 65vh;
+    width: auto;
+}
+
+.target {
+    font-size: 35px;
+}

@@ -1,0 +1,39 @@
+<div class="target">
+    {{target-base}}
+</div>
+<br>
+<button id="click-show-btn" onclick="toggle_click_show()">Toggle Sentence</button>
+<div id="click-show" hidden>
+    {{#sentence}}
+        {{sentence}}
+        <br>
+    {{/sentence}}
+    {{#target-audio}}
+        [sound:{{target-audio}}]
+        <br>
+    {{/target-audio}}
+    <img src="{{image}}" alt="{{source}}">
+    {{#source}}
+        <br>
+        (source: {{source}})
+    {{/source}}
+</div>
+
+<script>
+/* Key events */
+document.addEventListener(
+    "keydown",
+    (event) => {
+        /* Toggle on 'g' */
+        if (event.key == 'g') {
+            toggle_click_show();
+        }
+    },
+    false
+);
+
+function toggle_click_show() {
+    let click_show = document.getElementById('click-show');
+    click_show.hidden = !click_show.hidden;
+}
+</script>
