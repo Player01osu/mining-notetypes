@@ -12,7 +12,12 @@
         [sound:{{target-audio}}]
         <br>
     {{/target-audio}}
-    <img src="{{image}}" alt="{{source}}">
+    {{#image-pasted}}
+        {{image-pasted}}
+    {{/image-pasted}}
+    {{#image-raw}}
+        <img src="{{image-raw}}">
+    {{/image-raw}}
     {{#source}}
         <br>
         (source: {{source}})
