@@ -26,16 +26,21 @@
 
 <script>
 /* Key events */
-document.addEventListener(
-    "keydown",
-    (event) => {
-        /* Toggle on 'g' */
-        if (event.key == 'g') {
-            toggle_click_show();
+function set_event_listeners() {
+    document.addEventListener(
+        "keydown",
+        (event) => {
+            /* Toggle on 'g' */
+            if (event.key === 'g' || event.key === 'G') {
+                toggle_click_show();
+            }
         }
-    },
-    false
-);
+    );
+}
+if (!globalThis.is_set_listeners) {
+    globalThis.is_set_listeners = true;
+    set_event_listeners();
+}
 
 function toggle_click_show() {
     const click_show = document.getElementById('click-show');
