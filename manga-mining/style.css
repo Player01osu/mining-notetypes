@@ -10,9 +10,8 @@
 }
 
 img {
-    height: 65vh;
-    width: auto;
     max-height: 65vh;
+    max-width: 65vh;
 }
 
 .target {
