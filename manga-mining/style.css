@@ -17,3 +17,11 @@ img {
 .target {
     font-size: 35px;
 }
+
+.android button {
+    background-color: #000000;
+    border: 1px solid #909090;
+    font-size: 16px;
+    padding 30px 50px;
+    color: white;
+}
